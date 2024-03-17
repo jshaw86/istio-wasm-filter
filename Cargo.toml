@@ -10,6 +10,8 @@ crate-type = ["cdylib"]
 log = "0.4.21"
 proxy-wasm = "0.2.1"
 wasm-bindgen = "0.2"
+reqwest_wasi = { version = "0.11.16", features = ["blocking", "json"] }
+
 
 [package.metadata.wasm-pack.profile.release]
 wasm-opt = false
