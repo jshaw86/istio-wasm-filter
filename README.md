@@ -17,7 +17,7 @@ This provisions istio and sets up httpbin to your kubernetes cluster
 - change the oci url in `wasm-plugin.yaml`
 
 # Build
-The below will build the rust lib with `wasm-pack`, create and push a tag to your docker/repo. The wasm plugin currently only tags 
+The below will build the rust lib with `wasm32-wasi`, create and push a tag to your docker/repo. The wasm plugin currently only tags 
 
 - `docker build . -t <docker/repo:tag> # example dockerio_username/wasm:latest` 
 - `docker push <docker/repo:tag>`

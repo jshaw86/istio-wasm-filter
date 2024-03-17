@@ -7,4 +7,4 @@ spec:
   selector:
     matchLabels:
       istio: ingressgateway
-  url: oci://index.docker.io/jshaw86/wasm:v0.3
+  url: oci://index.docker.io/jshaw86/wasm:v0.4

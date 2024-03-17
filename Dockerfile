@@ -1,8 +1,9 @@
 FROM rust:1.76-buster AS wasm-builder
 WORKDIR /build
 COPY . /build
-RUN cargo install wasm-pack
-RUN wasm-pack -v build
+RUN rustup target add wasm32-wasi
+RUN cargo build --target wasm32-wasi --release
 
 FROM scratch
-COPY --from=wasm-builder /build/pkg/istio_http_filter_bg.wasm ./plugin.wasm
+COPY --from=wasm-builder /build/target/wasm32-wasi/release/istio_http_filter.wasm ./plugin.wasm
+
